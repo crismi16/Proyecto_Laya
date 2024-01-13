@@ -27,6 +27,9 @@ body {
 
 .contenedor .header {
   grid-area: header;
+  text-align: center;
+  /* position: relative;
+  height: 100vh; */
 }
 .contenedor nav {
   grid-area: nav;
@@ -56,9 +59,10 @@ body {
   display: flex;
   justify-content: center;
 }
-.centrar {
-  text-align: center;
-}
+/* .header .video{
+  object-fit: cover;
+  position: absolute;
+} */
 @media screen and (max-width: 768px) {
   body {
     background-image: url("/img/laya_rojo.jpg");
