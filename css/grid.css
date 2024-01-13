@@ -63,6 +63,9 @@ body {
   object-fit: cover;
   position: absolute;
 } */
+.slide{
+  text-align: center;
+}
 @media screen and (max-width: 768px) {
   body {
     background-image: url("/img/laya_rojo.jpg");
