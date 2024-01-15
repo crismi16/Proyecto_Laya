@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;  
 }
 body {
   background-image: url("/img/laya_rojo.jpg");
@@ -21,54 +24,118 @@ body {
     "formulario  formulario"
     "informacion informacion"
     "footer      footer";
-  margin: 10px;
   grid-gap: 10px;
 }
 
-.contenedor .header {
+header {
   grid-area: header;
   text-align: center;
   /* position: relative;
   height: 100vh; */
 }
-.contenedor nav {
+nav {
   grid-area: nav;
 }
-.contenedor .slide {
+.slide {
   grid-area: slide;
+  text-align: center;
 }
-.contenedor .main {
+main {
   grid-area: main;
-  display: inline-block;
   color: white;
+  max-width: 1200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.contenedor .aside {
+aside {
   grid-area: aside;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.contenedor .article {
+article {
   grid-area: article;
   display: flex;
+  color: white;
 }
-.contenedor .formulario {
+.formulario {
   grid-area: formulario;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.contenedor .informacion {
+.informacion {
+  color: white;
   grid-area: informacion;
 }
-.contenedor footer {
+footer {
   grid-area: footer;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  color: white;
 }
 /* .header .video{
   object-fit: cover;
   position: absolute;
 } */
-.slide{
-  text-align: center;
+.cajan{
+  
 }
-.article{
-  color: white;
+figure {
+	width: 300px;
+	height: 250px;
+	margin:0;
+	position: relative;
+	transition: all ease .5s;
+	transform-style: preserve-3d;
+	transform: perspective(600px) rotateY(0deg);
+}
+figure .frontal,
+figure .trasera {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	transition: all ease .5s;
+}
+
+figure .frontal {
+	display: block;
+	background: #000;
+	/* backface-visibility: hidden; */
+}
+
+figure .trasera {
+	position: absolute;
+	top: 0;
+	padding: 20px;
+  text-align: center;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+	overflow: auto;
+
+  background: rgba(212,28,71,0.75);
+  background: -moz-linear-gradient(45deg, rgba(212,28,71,0.75) 0%, rgba(217,12,63,0.5) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(212,28,71,0.75)), color-stop(100%, rgba(217,12,63,0.5)));
+  background: -webkit-linear-gradient(45deg, rgba(212,28,71,0.75) 0%, rgba(217,12,63,0.5) 100%);
+  background: -o-linear-gradient(45deg, rgba(212,28,71,0.75) 0%, rgba(217,12,63,0.5) 100%);
+  background: -ms-linear-gradient(45deg, rgba(212,28,71,0.75) 0%, rgba(217,12,63,0.5) 100%);
+  background: linear-gradient(45deg, rgba(212,28,71,0.75) 0%, rgba(217,12,63,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d41c47', endColorstr='#d90c3f', GradientType=1 );
+}
+.cajan:hover figure {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  -ms-transform: perspective(600px) rotateY(180deg);
+  -o-transform: perspective(600px) rotateY(180deg);
+	transform: perspective(600px) rotateY(180deg);
+	-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
 }
 @media screen and (max-width: 768px) {
   body {
@@ -77,3 +144,13 @@ body {
     background-size: contain;
   }
 }
+/* @media screen and (max-width: 992px) { 
+	figure .trasera {
+		position: relative;
+		backface-visibility:visible;
+		transform: perspective(600px) rotateY(0deg);
+	}
+	.contenedor_tarjeta:hover figure {
+		transform: perspective(600px) rotateY(0deg);	
+	}
+} */
