@@ -9,7 +9,16 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/grid.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="css/productos.css">
     <link rel="stylesheet" href="css/bootstrap.css" />
     <title>Proyecto</title>
   </head>
@@ -64,14 +73,14 @@
                   >Producto</a
                 >
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Pasteles</a>
-                  <a class="dropdown-item" href="#">Galletas</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Promociones</a>
+                  <a class="dropdown-item" href="#Productos">Pasteles</a>
+                  <a class="dropdown-item" href="#Galletas">Galletas</a>
+                  <!-- <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Promociones</a> -->
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#Contacto">Contacto</a>
               </li>
             </ul>
           </div>
@@ -85,6 +94,7 @@
             <ul class="navbar-nav ms-auto">
               <li>
                 <form class="d-flex">
+                  <!-- <i class="fa-solid fa-cart-shopping fa-bounce"></i> -->
                   <input
                     class="form-control me-sm-2"
                     type="search"
@@ -139,12 +149,12 @@
                 height="400px"
                 class="d-block w-100"
               ></video>
-              <div class="carousel-caption d-none">
+              <!-- <div class="carousel-caption d-none">
                 <h5>First slide label</h5>
                 <p>
                   Some representative placeholder content for the first slide.
                 </p>
-              </div>
+              </div> -->
             </div>
             <div class="carousel-item">
               <video
@@ -157,12 +167,6 @@
                 height="400px"
                 class="d-block w-100"
               ></video>
-              <div class="carousel-caption d-none">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
-              </div>
             </div>
           </div>
           <button
@@ -185,10 +189,10 @@
           </button>
         </div>
       </div>
-      <div class="titulo">
+      <div class="titulo-n" id="Nosotros">
         <h1>¿QUIENES SOMOS?</h1>
       </div>
-      <main class="main" id="Nosotros">
+      <main class="main">
         <div class="tarjeta">
           <figure>
             <img src="img/misión.jpg" alt="Misión" class="frontal" />
@@ -271,66 +275,449 @@
           </figure>
         </div>
       </main>
-      <!-- <article class="article"></article> -->
-      <div class="formulario">
+      <div id="Productos" class="titulo-p">
+        <h1>NUESTROS PRODUCTOS</h1>
+      </div>
+      <div>
+        <div class="boton">
+          <button id="btn-pastel" onclick="mostrar1()" type="button" class="btn-info">Pasteles</button>
+          <button id="btn-galleta" onclick="mostrar2()" type="button" class="btn-warning">Galletas</button>
+        </div>
+        <div id="Pasteles">
+          <div class="pastel">
+            <h1>PASTELES</h1>
+            <div class="card">
+              <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                  <h6>Torta de zanahoria</h6>
+              </div>
+              <div class="card_info">
+                  <div class="head">
+                      <p class="title">Torta de zanahoria</p>
+                      <div class="description">
+                          <div class="item">
+                              <i class="fa-regular fa-clock"></i>
+                              90 min
+                          </div>
+                          <div class="item">
+                              <i class="fa-regular fa-user"></i>
+                              8
+                          </div>
+                      </div>
+                  </div>
+                  <div class="content">
+                      <p class="title">Ingredientes:</p>
+                      <ul class="list">
+                          <li>1 porción de quinoa</li>
+                          <li>1 porción de harina</li>
+                          <li>5 zanahoria</li>
+                          <li>1 porción de azúcar</li>
+                      </ul>
+                  </div>
+                  <div class="action">
+                      <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                  </div>
+              </div>
+            </div>
+            <div class="card">
+              <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                  <h6>Torta de zanahoria</h6>
+              </div>
+              <div class="card_info">
+                  <div class="head">
+                      <p class="title">Torta de zanahoria</p>
+                      <div class="description">
+                          <div class="item">
+                              <i class="fa-regular fa-clock"></i>
+                              90 min
+                          </div>
+                          <div class="item">
+                              <i class="fa-regular fa-user"></i>
+                              8
+                          </div>
+                      </div>
+                  </div>
+                  <div class="content">
+                      <p class="title">Ingredientes:</p>
+                      <ul class="list">
+                          <li>1 porción de quinoa</li>
+                          <li>1 porción de harina</li>
+                          <li>5 zanahoria</li>
+                          <li>1 porción de azúcar</li>
+                      </ul>
+                  </div>
+                  <div class="action">
+                      <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                  </div>
+              </div>
+            </div>
+            <div class="card">
+              <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                  <h6>Torta de zanahoria</h6>
+              </div>
+              <div class="card_info">
+                  <div class="head">
+                      <p class="title">Torta de zanahoria</p>
+                      <div class="description">
+                          <div class="item">
+                              <i class="fa-regular fa-clock"></i>
+                              90 min
+                          </div>
+                          <div class="item">
+                              <i class="fa-regular fa-user"></i>
+                              8
+                          </div>
+                      </div>
+                  </div>
+                  <div class="content">
+                      <p class="title">Ingredientes:</p>
+                      <ul class="list">
+                          <li>1 porción de quinoa</li>
+                          <li>1 porción de harina</li>
+                          <li>5 zanahoria</li>
+                          <li>1 porción de azúcar</li>
+                      </ul>
+                  </div>
+                  <div class="action">
+                      <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                  </div>
+              </div>
+            </div>
+            <div class="card">
+              <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                  <h6>Torta de zanahoria</h6>
+              </div>
+              <div class="card_info">
+                  <div class="head">
+                      <p class="title">Torta de zanahoria</p>
+                      <div class="description">
+                          <div class="item">
+                              <i class="fa-regular fa-clock"></i>
+                              90 min
+                          </div>
+                          <div class="item">
+                              <i class="fa-regular fa-user"></i>
+                              8
+                          </div>
+                      </div>
+                  </div>
+                  <div class="content">
+                      <p class="title">Ingredientes:</p>
+                      <ul class="list">
+                          <li>1 porción de quinoa</li>
+                          <li>1 porción de harina</li>
+                          <li>5 zanahoria</li>
+                          <li>1 porción de azúcar</li>
+                      </ul>
+                  </div>
+                  <div class="action">
+                      <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                  </div>
+              </div>
+            </div>
+            <div class="card">
+              <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                  <h6>Torta de zanahoria</h6>
+              </div>
+              <div class="card_info">
+                  <div class="head">
+                      <p class="title">Torta de zanahoria</p>
+                      <div class="description">
+                          <div class="item">
+                              <i class="fa-regular fa-clock"></i>
+                              90 min
+                          </div>
+                          <div class="item">
+                              <i class="fa-regular fa-user"></i>
+                              8
+                          </div>
+                      </div>
+                  </div>
+                  <div class="content">
+                      <p class="title">Ingredientes:</p>
+                      <ul class="list">
+                          <li>1 porción de quinoa</li>
+                          <li>1 porción de harina</li>
+                          <li>5 zanahoria</li>
+                          <li>1 porción de azúcar</li>
+                      </ul>
+                  </div>
+                  <div class="action">
+                      <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Galletas">
+          <div class="galleta">
+            <h1>GALLETAS</h1>
+          <div class="card">
+            <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel.jpg)">
+                <h6>Torta de zanahoria</h6>
+            </div>
+            <div class="card_info">
+                <div class="head">
+                    <p class="title">Torta de zanahoria</p>
+                    <div class="description">
+                        <div class="item">
+                            <i class="fa-regular fa-clock"></i>
+                            90 min
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-user"></i>
+                            8
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">Ingredientes:</p>
+                    <ul class="list">
+                        <li>1 porción de quinoa</li>
+                        <li>1 porción de harina</li>
+                        <li>5 zanahoria</li>
+                        <li>1 porción de azúcar</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                </div>
+            </div>
+          </div>
+          <div class="card">
+            <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                <h6>Torta de zanahoria</h6>
+            </div>
+            <div class="card_info">
+                <div class="head">
+                    <p class="title">Torta de zanahoria</p>
+                    <div class="description">
+                        <div class="item">
+                            <i class="fa-regular fa-clock"></i>
+                            90 min
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-user"></i>
+                            8
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">Ingredientes:</p>
+                    <ul class="list">
+                        <li>1 porción de quinoa</li>
+                        <li>1 porción de harina</li>
+                        <li>5 zanahoria</li>
+                        <li>1 porción de azúcar</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                </div>
+            </div>
+          </div>
+          <div class="card">
+            <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                <h6>Torta de zanahoria</h6>
+            </div>
+            <div class="card_info">
+                <div class="head">
+                    <p class="title">Torta de zanahoria</p>
+                    <div class="description">
+                        <div class="item">
+                            <i class="fa-regular fa-clock"></i>
+                            90 min
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-user"></i>
+                            8
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">Ingredientes:</p>
+                    <ul class="list">
+                        <li>1 porción de quinoa</li>
+                        <li>1 porción de harina</li>
+                        <li>5 zanahoria</li>
+                        <li>1 porción de azúcar</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                </div>
+            </div>
+          </div>
+          <div class="card">
+            <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                <h6>Torta de zanahoria</h6>
+            </div>
+            <div class="card_info">
+                <div class="head">
+                    <p class="title">Torta de zanahoria</p>
+                    <div class="description">
+                        <div class="item">
+                            <i class="fa-regular fa-clock"></i>
+                            90 min
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-user"></i>
+                            8
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">Ingredientes:</p>
+                    <ul class="list">
+                        <li>1 porción de quinoa</li>
+                        <li>1 porción de harina</li>
+                        <li>5 zanahoria</li>
+                        <li>1 porción de azúcar</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                </div>
+            </div>
+          </div>
+          <div class="card">
+            <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                <h6>Torta de zanahoria</h6>
+            </div>
+            <div class="card_info">
+                <div class="head">
+                    <p class="title">Torta de zanahoria</p>
+                    <div class="description">
+                        <div class="item">
+                            <i class="fa-regular fa-clock"></i>
+                            90 min
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-user"></i>
+                            8
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">Ingredientes:</p>
+                    <ul class="list">
+                        <li>1 porción de quinoa</li>
+                        <li>1 porción de harina</li>
+                        <li>5 zanahoria</li>
+                        <li>1 porción de azúcar</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                </div>
+            </div>
+          </div>
+          </div>
+        </div>
+          <!-- <div class="tarjetap">
+            <div class="card">
+              <div id="contenedor1" class="card_landing" style="--i:url(/img/pastel3.jpg)">
+                  <h6>Torta de zanahoria</h6>
+              </div>
+              <div class="card_info">
+                  <div class="head">
+                      <p class="title">Torta de zanahoria</p>
+                      <div class="description">
+                          <div class="item">
+                              <i class="fa-regular fa-clock"></i>
+                              90 min
+                          </div>
+                          <div class="item">
+                              <i class="fa-regular fa-user"></i>
+                              8
+                          </div>
+                      </div>
+                  </div>
+                  <div class="content">
+                      <p class="title">Ingredientes:</p>
+                      <ul class="list">
+                          <li>1 porción de quinoa</li>
+                          <li>1 porción de harina</li>
+                          <li>5 zanahoria</li>
+                          <li>1 porción de azúcar</li>
+                      </ul>
+                  </div>
+                  <div class="action">
+                      <a href="#" class="btn"><h5>Comprar producto</h5></a>
+                  </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div id="contenedor2" class="contenedor_oculto"></div> -->
+      </div>
+      <div id="Contacto" class="formulario">
         <h1>Suscríbete</h1>
-        <div class="form-group">
-          <div class="form-floating mb-3">
-            <input
-              class="form-control"
-              id="readOnlyInput"
-              type="text"
-              placeholder="Cristian Castro"
-            />
-            <label for="floatingInput">Nombre:</label>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cristian Tulmo" required>
           </div>
-        </div>
-        <div class="form-group">
-          <div class="form-floating mb-3">
-            <input
-              type="email"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Email:</label>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com" required>
+            <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
           </div>
-        </div>
-        <div>
-          <ul class="pagination">
-            <li class="page-item disabled">
-              <a class="page-link" href="#">&laquo;</a>
-            </li>
-            <li class="page-item active">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">&raquo;</a>
-            </li>
-          </ul>
-        </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Teléfono:</label>
+            <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="09999999999">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Asunto:</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Asunto">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Estoy de acuerdo con los Términos y Condiciones</label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
+          <!-- <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="123456">
+          </div> -->
+        </form>
       </div>
       <div class="informacion">
-        <hr />
-        <h2>Sobre el sitio</h2>
-        Pedidos Onine
-        <br />
-        Sobre Nosotros
-        <br />
-        Preguntas Frecuentes
-        <br />
-        Términos y Condiciones
-        <br />
-        Políticas de Privacidad
-        <hr />
+        <div>
+          <h2>Sobre el sitio</h2>
+          Pedidos Online
+          <br />
+          Sobre Nosotros
+          <br />
+          Preguntas Frecuentes
+          <br />
+          Términos y Condiciones
+          <br />
+          Políticas de Privacidad
+        </div>
+        <div>
+          <h2>Productos</h2>
+          Pasteles
+          <br />
+          Galletas
+        </div>
+        <div>
+          <h2>Contáctanos</h2>
+          <i class="fa-sharp fa-solid fa-location-dot fa-bounce"></i>
+          Calle Quilindaña y Putzalahua
+          <br />
+          <i class="fa-solid fa-phone"></i> 0993534569
+          <br />
+           Redes sociales <br>
+          <i class="fa-solid fa-envelope"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
       </div>
-      <footer class="footer">
+      <footer class="footer fixed-bottom">
         <address>Calle Quilindaña y Putzalahua, Latacunga, Ecuador</address>
       </footer>
     </div>
@@ -339,5 +726,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="js/mostrar.js"></script>
+    <!-- <script src="js/mostrar.js"></script> -->
   </body>
 </html>

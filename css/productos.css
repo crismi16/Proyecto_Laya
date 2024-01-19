@@ -1,0 +1,155 @@
+.boton{
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    margin: 20px;
+    gap: 100px;
+}
+
+#Galletas{
+    display: none;
+}
+
+.pastel ,
+.galleta{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   /* display: grid;
+   place-content: center; */
+    /* grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); */
+    /* max-height: 300px; */
+    /* grid-template-rows: minmax(300px,auto); */
+    /* grid-auto-flow: row dense; */
+    border: solid 2px #d6d78a;
+    margin: 20px;
+    gap: 40px;
+}
+
+#Pasteles h1,
+#Galletas h1{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    background: #d6d78a; 
+}
+
+/* .tarjetap{
+    display: flex;
+    width: 250px;
+    height: 250px;
+} */
+
+.contenedor_oculto{
+    display: none;
+    width: 250px;
+    height: 250px;
+}
+
+.card {
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    /* width: 250px;
+    height: 250px; */
+}
+
+.card .card_landing {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 5px 10px #000;
+    background: linear-gradient(transparent 80%, #000), var(--i);
+    background-position: center;
+    background-size: cover;
+    align-items: end;
+    /* z-index: 1; */
+}
+
+.card .card_landing h6 {
+    margin: 0;
+    /* position: absolute; */
+    /* bottom: 10px;
+    left: 10px; */
+    font-size: 25px;
+    color: #fff;
+}
+
+.card .card_info {
+    /* position: absolute; */
+    width: 250px;
+    height: 250px;
+    /* width: 90%;
+    height: 90%; */
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    /* margin: auto; */
+    padding: 15px;
+    background: #fff;
+    z-index: 0;
+    box-shadow: 0 5px 10px #000;
+    transition: .5s;
+    overflow: auto;
+}
+
+.card:hover .card_info {
+    left: 100%;
+}
+
+.card_info .head {
+    /* padding: 5px 0; */
+    border-bottom: solid 1px #bc8811;
+}
+
+ .card_info .head .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: #bc8811;
+}
+
+.card_info .head .description {
+    display: flex;
+    gap: 20px;
+}
+
+.card_info .head .description .item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.card_info .head .description .item i {
+    color: #bc8811;
+    font-size: 15px;
+}
+
+.card_info .content {
+    margin-top: 15px;
+}
+
+.card_info .content .list {
+    padding: 0px 15px;
+}
+
+.card_info .content .list li {
+    margin-bottom: 5px;
+}
+
+.card_info .action .btn {
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background: #bc8811;
+    display: block;
+    margin-top: 10px;
+}
+
+.card_info .action .btn h5 {
+    margin: 0;
+}
